@@ -1,0 +1,67 @@
+{
+  "model": "RandomForestClassifier",
+  "dataset": "UNSW-NB15",
+  "trained_at": "2026-04-06T00:53:14.557970",
+  "build": "bc785df3",
+  "rf_params": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "n_features": 43,
+  "n_train": 206138,
+  "n_test": 51535,
+  "best_threshold": 0.4199999999999998,
+  "metrics": {
+    "accuracy": 0.9574,
+    "auc_roc": 0.9943,
+    "precision": 0.9507,
+    "recall": 0.9844,
+    "f1_attack": 0.9673,
+    "fpr": 0.0903,
+    "fnr": 0.0156,
+    "tp": 32422,
+    "tn": 16920,
+    "fp": 1680,
+    "fn": 513
+  },
+  "classification_report": {
+    "Normal": {
+      "precision": 0.9705730511099638,
+      "recall": 0.9096774193548387,
+      "f1-score": 0.9391391224710682,
+      "support": 18600.0
+    },
+    "Attack": {
+      "precision": 0.9507360272124802,
+      "recall": 0.9844238651890087,
+      "f1-score": 0.9672867222578576,
+      "support": 32935.0
+    },
+    "accuracy": 0.9574463956534394,
+    "macro avg": {
+      "precision": 0.960654539161222,
+      "recall": 0.9470506422719237,
+      "f1-score": 0.953212922364463,
+      "support": 51535.0
+    },
+    "weighted avg": {
+      "precision": 0.9578956011814954,
+      "recall": 0.9574463956534394,
+      "f1-score": 0.9571276972062561,
+      "support": 51535.0
+    }
+  },
+  "attack_types": [
+    "Analysis",
+    "Backdoor",
+    "DoS",
+    "Exploits",
+    "Fuzzers",
+    "Generic",
+    "Reconnaissance",
+    "Shellcode",
+    "Worms"
+  ]
+}

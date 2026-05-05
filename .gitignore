@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+.env
+UNSW_NB15_training-set.csv
+UNSW_NB15_testing-set.csv
+.claude/
+gitignore
