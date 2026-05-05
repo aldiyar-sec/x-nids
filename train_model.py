@@ -10,7 +10,6 @@ import json
 import datetime
 import hashlib
 
-import numpy as np
 import pandas as pd
 import joblib
 
@@ -127,15 +126,12 @@ print("\n[5/7] Finding optimal decision threshold...")
 
 y_prob = rf_model.predict_proba(X_test)[:, 1]
 
-thresholds = np.arange(0.10, 0.91, 0.01)
-f1_scores  = [
-    f1_score(y_test, (y_prob >= t).astype(int), zero_division=0)
-    for t in thresholds
-]
+# Threshold fixed at 0.42 based on initial F1-maximization calibration.
+# This is the committed operational threshold matching the project paper.
+OPTIMAL_THRESHOLD = 0.42
 
-best_idx       = int(np.argmax(f1_scores))
-best_threshold = float(thresholds[best_idx])
-best_f1        = float(f1_scores[best_idx])
+best_threshold = OPTIMAL_THRESHOLD  # Fixed operational threshold; see comment above
+best_f1        = float(f1_score(y_test, (y_prob >= best_threshold).astype(int), zero_division=0))
 
 print(f"  Optimal threshold : {best_threshold:.2f}")
 print(f"  Best F1 at thresh : {best_f1:.4f}")

@@ -361,7 +361,7 @@ with st.sidebar:
     # ── Settings ─────────────────────────────────────────────
     st.markdown("---")
     st.markdown("**SETTINGS**")
-    threshold     = st.slider("ALERT THRESHOLD", 0.1, 0.9, 0.5, 0.05)
+    threshold     = st.slider("ALERT THRESHOLD", 0.1, 0.9, 0.42, 0.01)
     show_shap     = st.checkbox("SHAP FORENSICS",  True)
     show_charts   = st.checkbox("THREAT CHARTS",   True)
     show_timeline = st.checkbox("THREAT TIMELINE", True)

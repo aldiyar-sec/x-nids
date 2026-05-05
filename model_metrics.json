@@ -12,7 +12,7 @@
   "n_features": 43,
   "n_train": 206138,
   "n_test": 51535,
-  "best_threshold": 0.4199999999999998,
+  "best_threshold": 0.42,
   "metrics": {
     "accuracy": 0.9574,
     "auc_roc": 0.9943,
